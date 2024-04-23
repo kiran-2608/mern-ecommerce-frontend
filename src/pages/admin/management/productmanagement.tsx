@@ -11,7 +11,7 @@ import {
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { server } from "../../../redux/store";
 import { Skeleton } from "../../../components/loader";
-import { resposneToast } from "../../../utils/features";
+import { responseToast } from "../../../utils/features";
 
 const Productmanagement = () => {
   const { user } = useSelector(
@@ -76,7 +76,7 @@ const Productmanagement = () => {
       productId: data?.product._id!,
     });
 
-    resposneToast(res, navigate, "/admin/product");
+    responseToast(res, navigate, "/admin/product");
   };
 
   const deleteHandler = async () => {
@@ -85,7 +85,7 @@ const Productmanagement = () => {
       productId: data?.product._id!,
     });
 
-    resposneToast(res, navigate, "/admin/product");
+    responseToast(res, navigate, "/admin/product");
   };
 
   useEffect(() => {
