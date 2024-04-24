@@ -28,8 +28,8 @@ const Search = () => {
   const {
     isLoading: productLoading,
     data: searchedData,
-    isError: productIsError,
-    error: productError,
+    // isError: productIsError,
+    // error: productError,
   } = useSearchProductsQuery({
     search,
     sort,
@@ -54,10 +54,10 @@ const Search = () => {
     toast.error(err.data.message);
   }
 
-  if (productIsError) {
-    const err = productError as CustomError;
-    // toast.error(err.data.message);
-  }
+  // if (productIsError) {
+  //   const err = productError as CustomError;
+  //   // toast.error(err.data.message);
+  // }
 
   return (
     <div className="product-search-page">
